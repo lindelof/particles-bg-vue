@@ -56,6 +56,7 @@ export default {
     getProp(key, defaultVal) {
       const config = this.config || {};
       const val = config[key] || defaultVal;
+      
       if (Array.isArray(val)) {
         return new Proton.Span(val[0], val[1]);
       } else {

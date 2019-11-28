@@ -1,7 +1,8 @@
 <template>
   <component :is="particles" 
   :globalCompositeOperation="globalCompositeOperation"
-  :num="getNum()" :bg="bg" :color="color"></component>
+  :num="getNum()" :bg="bg" :color="color" 
+  :config="config"></component>
 </template>
 
 <script>

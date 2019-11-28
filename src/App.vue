@@ -39,7 +39,7 @@ export default {
       random: 15
     };
 
-    if (Math.random() > 0.85) {
+    if (Math.random() > 0.50) {
       this.config = Object.assign(this.config, {
         onParticleUpdate: (ctx, particle) => {
           ctx.beginPath();
