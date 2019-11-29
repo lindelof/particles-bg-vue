@@ -2,7 +2,8 @@
   <div id="app">
     <div>
       <div>hello world</div>
-      <particles-bg type="custom" :config="config" :bg="true" />
+      <!-- <particles-bg type="custom" :config="config" :bg="true" /> -->
+      <particles-bg type="tadpole" :bg="true" />
     </div>
   </div>
 </template>

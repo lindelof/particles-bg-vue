@@ -1,7 +1,7 @@
 <template>
   <canvas-comp
     :bg="bg"
-    global-composite-operation="lighter"
+    global-composite-operation="xor"
     v-on:canvasInited="canvasInited"
     v-on:canvasResize="canvasResize"
     v-on:canvasMouseDown="canvasMouseDown"
@@ -76,7 +76,7 @@ export default {
         new Proton.RectZone(0, 0, canvas.width, canvas.height),
         "bound"
       );
-      emitter.addBehaviour(new Proton.Color(this.color || "#bbb"));
+      emitter.addBehaviour(new Proton.Color(this.color || "#bbbbbb"));
       //emitter.addBehaviour(new Proton.Alpha(new Proton.Span(0.5, 1)));
       emitter.addBehaviour(attractionBehaviour, crossZoneBehaviour);
       emitter.addBehaviour(new Proton.RandomDrift(15, 15, 0.05));
