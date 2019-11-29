@@ -56,20 +56,22 @@ export default {
       return +this.num;
     },
     getRandom: function() {
-      if (!this.rand) {
-        this.rand = new Rand();
-        this.rand.set(0.25, "color-particles");
-        this.rand.set(0.2, "ball-particles");
-        this.rand.set(0.2, "circle-particles");
-        this.rand.set(0.2, "cobweb-particles");
-        this.rand.set(0.2, "thick-particles");
-        this.rand.set(0.2, "lines-particles");
-        this.rand.set(0.2, "fountain-particles");
-        this.rand.set(0.2, "polygon-particles");
-        this.rand.set(0.2, "square-particles");
-        this.rand.set(0.2, "tadpole-particles");
+      if (!this.random) {
+        // Code source from here, thanks author
+        // https://github.com/a-jie/Proton/blob/gh-pages/source/src/utils/Rand.js
+        this.random = new Rand();
+        this.random.set(0.25, "color-particles");
+        this.random.set(0.2, "ball-particles");
+        this.random.set(0.2, "circle-particles");
+        this.random.set(0.2, "cobweb-particles");
+        this.random.set(0.2, "thick-particles");
+        this.random.set(0.2, "lines-particles");
+        this.random.set(0.2, "fountain-particles");
+        this.random.set(0.2, "polygon-particles");
+        this.random.set(0.2, "square-particles");
+        this.random.set(0.2, "tadpole-particles");
       }
-      return this.rand.getResult();
+      return this.random.getResult();
     },
 
     setParticles: function() {
