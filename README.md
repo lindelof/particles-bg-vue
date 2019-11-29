@@ -116,28 +116,25 @@ You can use type="custom" to achieve a higher degree of freedom for the particle
 ```vue
   <particles-bg type="custom" :config="config" :bg="true"/>
   ...
-  
-  let config = {
-      num: [4, 7],
-      rps: 0.1,
-      radius: [5, 40],
-      life: [1.5, 3],
-      v: [2, 3],
-      tha: [-40, 40],
-      alpha: [0.6, 0],
-      scale: [1, 0.1],
-      position: "center", // all or {x:1,y:1,width:100,height:100}
-      color: ["random", "#ff0000"],
-      cross: "dead", // cross or bround
-      random: 15,  // or null
-      onParticleUpdate: (ctx, particle) => {
-          ctx.beginPath();
-          ctx.rect(particle.p.x, particle.p.y, particle.radius * 2, particle.radius * 2);
-          ctx.fillStyle = particle.color;
-          ctx.fill();
-          ctx.closePath();
+
+  data: function() {
+    return {
+      config: {
+        num: [4, 7],
+        rps: 0.1,
+        radius: [5, 40],
+        life: [1.5, 3],
+        v: [2, 3],
+        tha: [-30, 30],
+        body: icon,
+        alpha: [0.6, 0],
+        scale: [0.1, 0.4],
+        position: "all",
+        cross: "dead",
+        random: 15
       }
     };
+  }
 ```
 
 ## License
