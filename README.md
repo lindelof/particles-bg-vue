@@ -13,50 +13,61 @@ This project refers to the source code of the [Proton](https://a-jie.github.io/P
 #### A `React` version of `particles-bg` is here [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
 ### Online demo
-* demo1 [https://stackblitz.com/edit/react-a6pm3w](https://stackblitz.com/edit/react-a6pm3w?file=index.js)
-* demo2 [https://stackblitz.com/edit/react-bpv9fc](https://stackblitz.com/edit/react-bpv9fc?file=index.js)
-* custom [https://stackblitz.com/edit/react-sop6sx](https://stackblitz.com/edit/react-sop6sx?file=index.js)
+* demo1 [https://codesandbox.io/s/particles-bg-vue-bg145](https://codesandbox.io/s/particles-bg-vue-bg145)
+* demo2 [https://codesandbox.io/s/particles-bg-vue-qc1b5](https://codesandbox.io/s/particles-bg-vue-qc1b5)
+* custom [https://codesandbox.io/s/particles-bg-vue-2fkvr](https://codesandbox.io/s/particles-bg-vue-2fkvr)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/01.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/01.jpg?raw=true)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/02.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/02.jpg?raw=true)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/03.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/03.jpg?raw=true)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/04.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/04.jpg?raw=true)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/05.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/05.jpg?raw=true)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/06.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/06.jpg?raw=true)
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/07.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/07.jpg?raw=true)
 
 ## Install
 
 ```bash
-npm install --save particles-bg
+npm install --save particles-bg-vue
 ```
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
+### Method 1: Import and use in the component
 
-import ParticlesBg from 'particles-bg'
+```vue
+<particles-bg type="lines" :bg="true" />
+...
 
-class Example extends Component {
-  render () {
-    return (
-      <div>...</div>
-      <ParticlesBg type="circle" bg={true} />
-    )
+import { ParticlesBg } from "particles-bg-vue";
+export default {
+  name: "App",
+  components: {
+    ParticlesBg
   }
-}
+};
 ```
 
+### Method 2: Use it globally
+```vue
+import VueParticlesBg from "particles-bg-vue";
+
+Vue.use(VueParticlesBg);
+
+....
+<particles-bg type="random" :bg="true" />
+```
+
+
 ## Parameter Description
-```jsx
-<ParticlesBg color="#ff0000" num={200} type="circle" bg={true} />
+```vue
+<particles-bg color="#ff0000" num=200 type="circle" :bg={true} />
 ```
 #### * type - Is the type of particle animation
 Is the type of particle animation, `random` is a random selection. You are also free to customize use `custom`.
@@ -81,6 +92,12 @@ Is the type of particle animation, `random` is a random selection. You are also 
 #### * color - The background color or particle color of the particle scene
 Notice: which should be an array under type=`color`
 
+#### * canvas - canvas dom style
+```vue
+:canvas="canvasObject"
+...
+```
+
 #### * bg - Set to html background
 Is set the following properties
 ```css
@@ -92,11 +109,14 @@ left: 0
 
 ## About Custom
 
-![](https://github.com/lindelof/particles-bg/blob/master/image/08.jpg?raw=true)
+![](https://github.com/lindelof/particles-bg-vue/blob/master/images/08.jpg?raw=true)
 
 You can use type="custom" to achieve a higher degree of freedom for the particle background.
 
-```jsx
+```vue
+  <particles-bg type="custom" :config="config" :bg="true"/>
+  ...
+  
   let config = {
       num: [4, 7],
       rps: 0.1,
@@ -118,13 +138,6 @@ You can use type="custom" to achieve a higher degree of freedom for the particle
           ctx.closePath();
       }
     };
-
-    return (
-      <div>
-        <SignIn />
-        <ParticlesBg type="custom" config={config} bg={true} />
-      </div>
-    )
 ```
 
 ## License

@@ -19,7 +19,7 @@ export default {
     return {
       config:{},
       canvasStyle:{
-        height:"199px"
+        // height:"199px"
       }
     };
   },
