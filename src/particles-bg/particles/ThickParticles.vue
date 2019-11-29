@@ -1,6 +1,7 @@
 <template>
   <canvas-comp
     :bg="bg"
+    :canvas="canvas"
     global-composite-operation="source-over"
     v-on:canvasInited="canvasInited"
     v-on:canvasResize="canvasResize"
@@ -20,6 +21,7 @@ export default {
     CanvasComp
   },
   props: {
+    canvas: Object,
     bg: Boolean,
     color: String,
     num: Number,
@@ -27,7 +29,7 @@ export default {
   },
   methods: {
     canvasInited(canvas) {
-      this.canvas = canvas;
+      this.canvasDom = canvas;
       this.createProton(canvas);
       RAFManager.add(this.renderProton);
       if (this.color) {
@@ -134,7 +136,7 @@ export default {
       return renderer;
     },
     renderProton() {
-      const canvas = this.canvas;
+      const canvas = this.canvasDom;
       this.proton.update();
       if (this.index % 200 === 0) {
         this.attraction.targetPosition.x = Math.random() * canvas.width;

@@ -2,8 +2,7 @@
   <div id="app">
     <div>
       <div>hello world</div>
-      <!-- <particles-bg type="custom" :config="config" :bg="true" /> -->
-      <particles-bg type="tadpole" :bg="true" />
+      <particles-bg type="custom" :config="config" :canvas="canvasStyle" :bg="true" />
     </div>
   </div>
 </template>
@@ -19,7 +18,9 @@ export default {
   data() {
     return {
       config:{},
-      msg: "Welcome to Your Vue.js App"
+      canvasStyle:{
+        height:"199px"
+      }
     };
   },
   methods: {},

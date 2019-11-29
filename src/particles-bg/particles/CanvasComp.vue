@@ -12,6 +12,7 @@
 export default {
   name: "CanvasComp",
   props: {
+    canvas: Object,
     bg: Boolean,
     globalCompositeOperation: String
   },
@@ -63,6 +64,10 @@ export default {
         top: 0,
         left: 0
       });
+    }
+
+    if(this.canvas){
+      this.styleObject = Object.assign(this.styleObject, this.canvas);
     }
   },
   mounted() {

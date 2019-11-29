@@ -1,6 +1,7 @@
 <template>
   <canvas-comp
     :bg="bg"
+    :canvas="canvas"
     global-composite-operation="xor"
     v-on:canvasInited="canvasInited"
     v-on:canvasResize="canvasResize"
@@ -30,6 +31,8 @@ export default {
     CanvasComp
   },
   props: {
+    canvas: Object,
+    canvas: Object,
     bg: Boolean,
     color: String,
     num: Number,

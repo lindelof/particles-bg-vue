@@ -1,8 +1,13 @@
 <template>
-  <component :is="particles" 
-  :globalCompositeOperation="globalCompositeOperation"
-  :num="getNum()" :bg="bg" :color="color" 
-  :config="config"></component>
+  <component
+    :is="particles"
+    :globalCompositeOperation="globalCompositeOperation"
+    :num="getNum()"
+    :bg="bg"
+    :color="color"
+    :canvas="canvas"
+    :config="config"
+  ></component>
 </template>
 
 <script>
@@ -44,6 +49,7 @@ export default {
     bg: Boolean,
     color: String,
     config: Object,
+    canvas: Object,
     globalCompositeOperation: String
   },
   data() {
