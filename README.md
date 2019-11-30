@@ -6,9 +6,9 @@
 
 [![NPM](https://img.shields.io/npm/v/particles-bg-vue.svg)](https://www.npmjs.com/package/particles-bg-vue) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> A vue.js particles animation background component
+> A vue.js particles animation background component. Use it to make your website look cool.
 
-#### A `React` version of `particles-bg` is here [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
+#### Check it out if you want to use it in `React` [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
 ### Online demo
 * demo1 [https://codesandbox.io/s/particles-bg-vue-bg145](https://codesandbox.io/s/particles-bg-vue-bg145)
@@ -29,7 +29,7 @@
 
 ![](https://github.com/lindelof/particles-bg-vue/blob/master/images/07.jpg?raw=true)
 
-## Indicate
+## Specify
 This project refers to the source code of the [Proton](https://a-jie.github.io/Proton/) official website, and proton's online [demo](https://codesandbox.io/s/proton-tadpole-yt6qu?fontsize=14&module=%2Fsrc%2Fcomponents%2FParticles.vue). I packaged it into a vue.js component. You can use it casually in your own projects
 
 ## Install
