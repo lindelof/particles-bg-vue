@@ -29,6 +29,7 @@
 
 ![](https://github.com/lindelof/particles-bg-vue/blob/master/images/07.jpg?raw=true)
 
+## Indicate
 This project refers to the source code of the [Proton](https://a-jie.github.io/Proton/) official website, and proton's online [demo](https://codesandbox.io/s/proton-tadpole-yt6qu?fontsize=14&module=%2Fsrc%2Fcomponents%2FParticles.vue). I packaged it into a vue.js component. You can use it casually in your own projects
 
 ## Install
