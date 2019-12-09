@@ -50,6 +50,7 @@ export default {
     color: String,
     config: Object,
     canvas: Object,
+    list: Array,
     globalCompositeOperation: String
   },
   data() {
@@ -80,6 +81,11 @@ export default {
       return this.random.getResult();
     },
 
+    getFromList(){
+      if(!list) return this.getRandom();
+      return list[Math.floor(Math.random() * list.length)];
+    },
+
     setParticles: function() {
       const type = this.type;
       let name = String(type).toLowerCase() || "random";
@@ -88,6 +94,10 @@ export default {
       this.particles = name;
       if (this.particles.indexOf("random") === 0) {
         this.particles = this.getRandom();
+      }
+
+      if (this.particles.indexOf("list") === 0) {
+        this.particles = this.getFromList();
       }
     }
   },
