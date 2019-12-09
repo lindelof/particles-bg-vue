@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <div>hello world</div>
-      <particles-bg type="custom" :config="config" :canvas="canvasStyle" :bg="true" />
+      <particles-bg type="list" :list="list" :config="config" :canvas="canvasStyle" :bg="true" />
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@ export default {
   },
   data() {
     return {
+      list:["lines", "circle"],
       config:{},
       canvasStyle:{
         // height:"199px"

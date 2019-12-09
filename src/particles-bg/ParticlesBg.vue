@@ -62,7 +62,7 @@ export default {
     getNum() {
       return +this.num;
     },
-    getRandom: function() {
+    getRandom() {
       if (!this.random) {
         // Code source from here, thanks author
         // https://github.com/a-jie/Proton/blob/gh-pages/source/src/utils/Rand.js
@@ -82,16 +82,21 @@ export default {
     },
 
     getFromList(){
-      if(!list) return this.getRandom();
-      return list[Math.floor(Math.random() * list.length)];
+      if(!this.list) return this.getRandom();
+      let item = this.list[Math.floor(Math.random() * this.list.length)];
+      item = this.transformName(item);
+
+      return item;
     },
 
-    setParticles: function() {
-      const type = this.type;
-      let name = String(type).toLowerCase() || "random";
+    transformName(name){
+      name = String(name).toLowerCase() || "random";
       if (name.indexOf("-") <= 0) name += "-particles";
+      return name;
+    },
 
-      this.particles = name;
+    setParticles() {
+      this.particles = this.transformName(this.type);
       if (this.particles.indexOf("random") === 0) {
         this.particles = this.getRandom();
       }
