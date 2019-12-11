@@ -10,6 +10,9 @@
 
 #### Check it out if you want to use it in `React` [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
+## Specify
+This project refers to the source code of the [Proton](https://a-jie.github.io/Proton/) official website, and proton's online [demo](https://codesandbox.io/s/proton-tadpole-yt6qu?fontsize=14&module=%2Fsrc%2Fcomponents%2FParticles.vue). I packaged it into a vue.js component. You can use it casually in your own projects
+
 ### Online demo
 * demo1 [https://codesandbox.io/s/particles-bg-vue-bg145](https://codesandbox.io/s/particles-bg-vue-bg145)
 * demo2 [https://codesandbox.io/s/particles-bg-vue-qc1b5](https://codesandbox.io/s/particles-bg-vue-qc1b5)
@@ -28,9 +31,6 @@
 ![](https://github.com/lindelof/particles-bg-vue/blob/master/images/06.jpg?raw=true)
 
 ![](https://github.com/lindelof/particles-bg-vue/blob/master/images/07.jpg?raw=true)
-
-## Specify
-This project refers to the source code of the [Proton](https://a-jie.github.io/Proton/) official website, and proton's online [demo](https://codesandbox.io/s/proton-tadpole-yt6qu?fontsize=14&module=%2Fsrc%2Fcomponents%2FParticles.vue). I packaged it into a vue.js component. You can use it casually in your own projects
 
 ## Install
 
