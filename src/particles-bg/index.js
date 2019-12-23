@@ -1,18 +1,19 @@
-import ParticlesBg from './ParticlesBg'
+import ParticlesBg from "./ParticlesBg";
 
 const components = {
-  ParticlesBg
-}
+  ParticlesBg: ParticlesBg
+};
 
-const install = function (Vue) {
-  if (install.installed) return
-  Object.keys(components).forEach(key => {
-    Vue.component(components[key].name, components[key])
-  })
-}
+const install = function(Vue) {
+  if (install.installed) return;
 
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue)
+  for (let key in components) {
+    Vue.component(components[key].name, components[key]);
+  }
+};
+
+if (typeof window !== "undefined" && window.Vue) {
+  install(window.Vue);
 }
 
 const VueParticlesBg = {
