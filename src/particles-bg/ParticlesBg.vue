@@ -65,7 +65,7 @@ export default {
     getRandom() {
       if (!this.random) {
         // Code source from here, thanks author
-        // https://github.com/a-jie/Proton/blob/gh-pages/source/src/utils/Rand.js
+        // https://github.com/drawcall/Proton/blob/gh-pages/source/src/utils/Rand.js
         this.random = new Rand();
         this.random.set(0.25, "color-particles");
         this.random.set(0.2, "ball-particles");
