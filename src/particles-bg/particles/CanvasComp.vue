@@ -75,7 +75,7 @@ export default {
     this.resize = this.resize.bind(this);
     window.addEventListener("resize", this.resize);
   },
-  beforeDestory() {
+  beforeDestroy() {
     window.removeEventListener("resize", this.resize);
   }
 };
