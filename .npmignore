@@ -3,6 +3,7 @@ docs/
 node_modules/
 example/
 examples/
+images/
 .*.swp
 .DS_Store
 .git
