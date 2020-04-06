@@ -27,8 +27,8 @@ export default {
   methods: {
     initCanvas: function() {
       const canvas = this.$refs.canvasRef;
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
       canvas.width = width;
       canvas.height = height;
 
@@ -41,8 +41,8 @@ export default {
     },
     resize: function() {
       const canvas = this.$refs.canvasRef;
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
       canvas.width = width;
       canvas.height = height;
       this.$emit("canvasResize", { width, height });
