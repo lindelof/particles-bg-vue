@@ -155,7 +155,7 @@ export default {
     this.colorTemplate = `hsla(hue,80%,50%, 0.75)`;
     this.renderProton = this.renderProton.bind(this);
   },
-  beforeDestory() {
+  beforeDestroy() {
     try {
       this.proton.destroy();
       RAFManager.remove(this.renderProton);

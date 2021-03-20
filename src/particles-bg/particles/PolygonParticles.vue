@@ -222,7 +222,7 @@ export default {
       this.proton && this.proton.update();
     }
   },
-  beforeDestory() {
+  beforeDestroy() {
     try {
       this.proton.destroy();
       RAFManager.remove(this.renderProton);

@@ -11,7 +11,7 @@
 ### Check it out if you want to use it in `React` [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
 ## Specify
-This project refers to the source code of the [Proton](https://drawcall.github.io/Proton/) official website, and proton's online [demo](https://codesandbox.io/s/proton-tadpole-yt6qu?fontsize=14&module=%2Fsrc%2Fcomponents%2FParticles.vue). I packaged it into a vue.js component. You can use it casually in your own projects
+This project refers to the source code of the [Proton](https://drawcall.github.io/Proton/) official website, and proton's online [demo](https://codesandbox.io/s/proton-tadpole-yt6qu?fontsize=14&module=%2Fsrc%2Fcomponents%2FParticles.vue). I packaged it into a vue.js component. Thanks to the great author.
 
 ### Online demo
 * demo1 [https://codesandbox.io/s/particles-bg-vue-bg145](https://codesandbox.io/s/particles-bg-vue-bg145)
@@ -137,6 +137,11 @@ You can use type="custom" to achieve a higher degree of freedom for the particle
     };
   }
 ```
+
+## Similar projects
+Maybe you will like these two projects, they will also make your page flourish
+* [https://github.com/lindelof/react-mouse-particles](https://github.com/lindelof/react-mouse-particles)
+* [https://github.com/lindelof/power-mode-input](https://github.com/lindelof/power-mode-input)
 
 ## License
 
